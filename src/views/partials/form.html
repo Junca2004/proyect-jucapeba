@@ -1,0 +1,87 @@
+<form class="row g-3 needs-validation " novalidate>
+  <div class="col-md-4">
+    <label for="validationCustomUsername" class="form-label">Código</label>
+    <div class="input-group has-validation">
+      <span class="input-group-text" id="inputGroupPrepend">#</span>
+      <input type="text" class="form-control" placeholder="Código" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+      <div class="invalid-feedback">
+        Porfavor introduce código válido.
+      </div>
+    </div>
+  </div>
+    <div class="col-md-4">
+      <label for="validationCustom01" class="form-label">Nombre del producto</label>
+      <input type="text" class="form-control" id="validationCustom01" placeholder="Nombre" value="" required>
+      <div class="valid-feedback">
+        ¡Bien!
+      </div>
+    </div>
+    <div class="col-md-4">
+      <label for="validationCustom02" class="form-label">Marca del producto</label>
+      <input type="text" class="form-control" id="validationCustom02" placeholder="Marca" value="" required>
+      <div class="valid-feedback">
+        ¡Bien!
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label for="validationCustom03" class="form-label">Descripción</label>
+      <input type="text" class="form-control" id="validationCustom03" required>
+      <div class="invalid-feedback">
+        Porfavor describe el item.
+      </div>
+    </div>
+    <div class="col-md-3">
+      <label for="validationCustomUsername" class="form-label">Precio del producto</label>
+      <div class="input-group has-validation">
+        <span class="input-group-text" id="inputGroupPrepend">$</span>
+        <input type="text" class="form-control" placeholder="Valor" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+        <div class="invalid-feedback">
+          Porfavor introduce un precio válido.
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <label for="validationCustom05" class="form-label">Cantidad</label>
+      <input type="text" class="form-control" id="validationCustom05" placeholder="#" required>
+      <div class="invalid-feedback">
+        Porfavor proporcione una cantidad válida.
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+        <label class="form-check-label" for="invalidCheck">
+          Acepta términos y condiciones.
+        </label>
+        <div class="invalid-feedback">
+          Debes abceptar términos y condiciones antes de continuar.
+        </div>
+      </div>
+    </div>
+    <div class="col-12">
+      <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#Modal">Agregar item</button>
+      <%- include('modal.html')%>
+    </div>
+  </form>
+  <script>
+  // Example starter JavaScript for disabling form submissions if there are invalid fields
+(function () {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()
+</script>

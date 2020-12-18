@@ -1,0 +1,21 @@
+{
+  "name": "proyecto_node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  },
+  "scripts": {
+    "start": "node src",
+    "home": "node src/index.js"
+  },
+  "keywords": [],
+  "author": "Julián Camilo Pérez Bambagüé",
+  "license": "ISC"
+}

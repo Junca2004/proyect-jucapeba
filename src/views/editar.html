@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <%- include('partials/head.html')%>
+</head>
+<body>
+    <%- include('partials/navbar.html')%>
+    <div class="third">
+    <div class="container">
+        <br>
+        <h1>Aplicativo para gestión en bases de datos:</h1>
+        <br>
+        <%- include('partials/subnavbar.html')%>
+        <br>
+        <form class="row g-3 needs-validation " novalidate>
+            <div class="col-md-4">
+              <label for="validationCustomUsername" class="form-label">Código</label>
+              <div class="input-group has-validation">
+                <span class="input-group-text" id="inputGroupPrepend">#</span>
+                <input type="text" class="form-control" placeholder="Código" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                <div class="invalid-feedback">
+                  Porfavor introduce código válido.
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+                <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#Modal">Consultar</button>
+                <%- include('partials/modal2.html')%>
+              </div>
+            </form>
+        <br>
+        <br>
+        </div>
+    </div>
+    <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function () {
+      'use strict'
+    
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      var forms = document.querySelectorAll('.needs-validation')
+    
+      // Loop over them and prevent submission
+      Array.prototype.slice.call(forms)
+        .forEach(function (form) {
+          form.addEventListener('submit', function (event) {
+            if (!form.checkValidity()) {
+              event.preventDefault()
+              event.stopPropagation()
+            }
+    
+            form.classList.add('was-validated')
+          }, false)
+        })
+    })()
+    </script>
+    <%- include('partials/footer.html')%>
+    <%- include('partials/scripts.html')%>
+</body>
+</html>
